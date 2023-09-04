@@ -1,9 +1,17 @@
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
-const Logo = () => {
+interface LogoProps {
+  className?: string
+}
+
+const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
-    <Link href='/' className='ml-4 lg:ml-0'>
-      <h1 className='text-xl font-bold'>Razer</h1>
+    <Link
+      href='/'
+      className={cn(`text-xl font-bold md:block lg:ml-0`, className)}
+    >
+      <h1>Razer</h1>
     </Link>
   )
 }
