@@ -1,5 +1,6 @@
-import { Button } from '../ui/button'
+import ThemeToggle from '../ThemeToggle'
 import Container from '../ui/container'
+import CartButton from './CartButton'
 import Logo from './Logo'
 import Menu from './Menu'
 
@@ -12,19 +13,13 @@ const Navbar = () => {
           <div className='flex items-center'>
             <Logo />
           </div>
-
           {/* Menu */}
           <Menu />
-          {/* Shopping Cart */}
           <div className='flex items-center'>
-            <Button
-              variant='ghost'
-              size='icon'
-              className='mr-2'
-              aria-label='Shopping Cart'
-            >
-              <span className='sr-only'>Shopping Cart</span>
-            </Button>
+            {/* Shopping Cart */}
+            <CartButton />
+            {/* Theme Toggler Button */}
+            <ThemeToggle />
           </div>
         </div>
       </Container>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import { cn } from '@/lib/utils'
 
 const routes = [
   {
@@ -20,9 +21,18 @@ const routes = [
   },
 ]
 
-const Menu = () => {
+export interface CartButtonProps {
+  className?: string
+}
+
+const Menu: React.FC<CartButtonProps> = ({ className }) => {
   return (
-    <div className='mx-6 items-center space-x-4 lg:space-x-6 hidden md:flex'>
+    <div
+      className={cn(
+        `mx-6 items-center space-x-4 lg:space-x-6 hidden md:flex`,
+        className,
+      )}
+    >
       {routes.map((route, i) => (
         <Button key={i} asChild variant='ghost'>
           <Link
