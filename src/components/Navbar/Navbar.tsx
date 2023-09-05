@@ -7,7 +7,7 @@ import Sidebar from './Sidebar'
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between py-1 px-4 border-b border-[#66B933]'>
+    <nav className='flex justify-between py-1 px-4 border-b dark:border-[#66B933] border-[#222222]'>
       <Container>
         <div className='relative px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between w-full'>
           <div className='flex items-center'>
