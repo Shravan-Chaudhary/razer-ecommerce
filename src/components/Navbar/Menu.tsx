@@ -35,10 +35,7 @@ const Menu: React.FC<CartButtonProps> = ({ className }) => {
     >
       {routes.map((route, i) => (
         <Button key={i} asChild variant='ghost'>
-          <Link
-            href={route.href}
-            className='text-sm font-medium transition-colors'
-          >
+          <Link href={route.href} className='text-xl transition-colors'>
             {route.label}
           </Link>
         </Button>
